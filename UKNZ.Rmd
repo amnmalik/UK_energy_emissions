@@ -66,7 +66,7 @@ queries <- listQueries(prj) # to check all queries added
 
 # prj <- mergeProjects("data/GJNZ_Ref_V3_2024_10_12.dat","data/GJNZ_NZ70_V3_2024_10_12.dat")
 
-prj <- rgcam::loadProject(proj = "data/uk11marchNZ.dat")
+prj <- rgcam::loadProject(proj = "data/uk29octNZ.dat")
 
 
 
@@ -79,8 +79,8 @@ queries <- listQueries(prj)
 # Loop through each dataframe in the list
 for (i in seq_along(queries)) {
   # Access the dataframe
-  prj[["base"]][[queries[i]]][["scenario"]] <- "Reference"
-  prj[["nz11march"]][[queries[i]]][["scenario"]] <- "Net_Zero"
+  prj[["bauelas"]][[queries[i]]][["scenario"]] <- "Reference"
+  prj[["nzelas"]][[queries[i]]][["scenario"]] <- "Net_Zero"
 }
 # See functions below if you want to drop scenarios
 # prj <- dropScenarios(prj,"ElecRail_ElecShwt_NZ70")
